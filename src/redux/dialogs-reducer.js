@@ -18,7 +18,7 @@ let initialState = {
     { id: 5, message: "Siberia" },
     { id: 6, message: "Tokio" },
   ],
-  newMessageBody: "",
+  newMessageBody: '',
 };
 
 const dialogsReducer = (state = initialState, action) => {
@@ -29,8 +29,8 @@ const dialogsReducer = (state = initialState, action) => {
       let body = state.newMessageBody;
       return {
         ...state,
-        newMessageBody: "",
-        messages: [...state.messages, { id: 6, message: body }],
+        newMessageBody: '',
+        messages: [ ...state.messages, { id: 6, message: body }],
       };
     default:
       return state;
