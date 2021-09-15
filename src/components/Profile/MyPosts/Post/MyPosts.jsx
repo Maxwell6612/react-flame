@@ -1,15 +1,17 @@
 import React from "react";
 import { Field, reduxForm } from "redux-form";
+import { maxLengthCreator, required } from "../../../../utils/validators/validators";
+import { Textarea } from "../../../common/FormsControls/FormsControls";
 // import { addPostActionCreator, updateNewPostTextActionCreator } from '../../../../redux/profile-reducer';
 import s from "./MyPosts.module.css";
 import Post from "./Post/Post";
+
+const maxLength10 = maxLengthCreator(10);
 
 const MyPosts = (props) => {
   let postsElements = props.post.map( p =>
     <Post message={p.message} likesCount={p.likesCount} />
   );
-
-  let newPostElement = React.createRef();
 
   let addPost = (values) => {
     props.addPost(values.newPostText);
@@ -29,7 +31,7 @@ let AddNewPostForm = (props) => {
     <form onSubmit={props.handleSubmit}>
       <div>
         <div>
-          <Field name="newPostText" component="textarea"/>
+          <Field name="newPostText" component={Textarea} placeholder={"Post message"} validate={[required, maxLength10]}/>
         </div>
         <div>
           <button>Add post</button>
