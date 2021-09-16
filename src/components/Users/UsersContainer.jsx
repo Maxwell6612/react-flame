@@ -41,6 +41,7 @@ render() {
 //         isFetching: state.usersPage.isFetching
 //     }
 // }
+
 let mapStateToProps = (state) => {
     return {
         users: getUsers(state),
