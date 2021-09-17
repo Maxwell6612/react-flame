@@ -8,10 +8,12 @@ import Post from "./Post/Post";
 
 const maxLength10 = maxLengthCreator(10);
 
-const MyPosts = (props) => {
+const MyPosts = React.memo(props => {
   let postsElements = props.post.map( p =>
     <Post message={p.message} likesCount={p.likesCount} />
   );
+
+  //let newPostElement = React.createRef();
 
   let addPost = (values) => {
     props.addPost(values.newPostText);
@@ -24,7 +26,8 @@ const MyPosts = (props) => {
       <div className={s.posts}>{postsElements}</div>
     </div>
   );
-};
+
+});
 
 let AddNewPostForm = (props) => {
   return (
