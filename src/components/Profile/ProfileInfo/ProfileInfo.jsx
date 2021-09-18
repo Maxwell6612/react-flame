@@ -1,23 +1,20 @@
 import React from 'react'
 import Preloader from '../../common/Preloader/Preloader';
 import s from './ProfileInfo.module.css';
-//import ProfileStatus from "./ProfileStatus";
 import ProfileStatusWithHooks from './ProfileStatusWithHooks';
+//import ProfileStatus from "./ProfileStatus"
 
-const ProfileInfo = (props) => {
+const ProfileInfo = ({profile, status, updateStatus}) => {
 
-    if (!props.profile) {
+    if (!profile) {
       return <Preloader />
     }
 
     return (
       <div >
-        {/* <div>
-          <img src="https://www.ephotozine.com/articles/how-to-use-horizontal-lines-successfully-in-your-images-17104/images/P9020034_dxo.jpg" alt=''/>
-        </div> */}
         <div className={s.descriptionBlock}>
-          <img alt='' src={props.profile.photos.large} />
-          <ProfileStatusWithHooks status={props.status} updateStatus={props.updateStatus}/>
+          <img alt='' src={profile.photos.large} />
+          <ProfileStatusWithHooks status={status} updateStatus={updateStatus}/>
     </div>
   </div>
     )

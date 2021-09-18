@@ -15,5 +15,6 @@
     padding: 10px;
 }
 
-/* .messages .message {} */
-
+.messages .message {
+    color: white;
+}
