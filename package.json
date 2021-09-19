@@ -2,7 +2,7 @@
   "name": "flame",
   "version": "0.1.0",
   "private": true,
-  "homepage": "https://github.com/Maxwell6612/react-flame",
+  "homepage": "https://maxwell6612.github.io/react-flame",
   "dependencies": {
     "@testing-library/jest-dom": "^5.11.9",
     "@testing-library/react": "^11.2.5",
