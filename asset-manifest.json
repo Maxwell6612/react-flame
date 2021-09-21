@@ -1,29 +1,29 @@
 {
   "files": {
     "main.css": "/react-flame/static/css/main.59f93dea.chunk.css",
-    "main.js": "/react-flame/static/js/main.41adaaf9.chunk.js",
-    "main.js.map": "/react-flame/static/js/main.41adaaf9.chunk.js.map",
-    "runtime-main.js": "/react-flame/static/js/runtime-main.b339d816.js",
-    "runtime-main.js.map": "/react-flame/static/js/runtime-main.b339d816.js.map",
-    "static/js/2.f7a79c35.chunk.js": "/react-flame/static/js/2.f7a79c35.chunk.js",
-    "static/js/2.f7a79c35.chunk.js.map": "/react-flame/static/js/2.f7a79c35.chunk.js.map",
-    "static/css/3.381ae2e5.chunk.css": "/react-flame/static/css/3.381ae2e5.chunk.css",
-    "static/js/3.7764a84a.chunk.js": "/react-flame/static/js/3.7764a84a.chunk.js",
-    "static/js/3.7764a84a.chunk.js.map": "/react-flame/static/js/3.7764a84a.chunk.js.map",
+    "main.js": "/react-flame/static/js/main.14553500.chunk.js",
+    "main.js.map": "/react-flame/static/js/main.14553500.chunk.js.map",
+    "runtime-main.js": "/react-flame/static/js/runtime-main.3eed7593.js",
+    "runtime-main.js.map": "/react-flame/static/js/runtime-main.3eed7593.js.map",
+    "static/js/2.7d6b71af.chunk.js": "/react-flame/static/js/2.7d6b71af.chunk.js",
+    "static/js/2.7d6b71af.chunk.js.map": "/react-flame/static/js/2.7d6b71af.chunk.js.map",
+    "static/css/3.528ac4fa.chunk.css": "/react-flame/static/css/3.528ac4fa.chunk.css",
+    "static/js/3.ff40107c.chunk.js": "/react-flame/static/js/3.ff40107c.chunk.js",
+    "static/js/3.ff40107c.chunk.js.map": "/react-flame/static/js/3.ff40107c.chunk.js.map",
     "static/css/4.66608899.chunk.css": "/react-flame/static/css/4.66608899.chunk.css",
-    "static/js/4.ce6edbce.chunk.js": "/react-flame/static/js/4.ce6edbce.chunk.js",
-    "static/js/4.ce6edbce.chunk.js.map": "/react-flame/static/js/4.ce6edbce.chunk.js.map",
+    "static/js/4.8342c9ad.chunk.js": "/react-flame/static/js/4.8342c9ad.chunk.js",
+    "static/js/4.8342c9ad.chunk.js.map": "/react-flame/static/js/4.8342c9ad.chunk.js.map",
     "index.html": "/react-flame/index.html",
-    "static/css/3.381ae2e5.chunk.css.map": "/react-flame/static/css/3.381ae2e5.chunk.css.map",
+    "static/css/3.528ac4fa.chunk.css.map": "/react-flame/static/css/3.528ac4fa.chunk.css.map",
     "static/css/4.66608899.chunk.css.map": "/react-flame/static/css/4.66608899.chunk.css.map",
     "static/css/main.59f93dea.chunk.css.map": "/react-flame/static/css/main.59f93dea.chunk.css.map",
-    "static/js/2.f7a79c35.chunk.js.LICENSE.txt": "/react-flame/static/js/2.f7a79c35.chunk.js.LICENSE.txt",
+    "static/js/2.7d6b71af.chunk.js.LICENSE.txt": "/react-flame/static/js/2.7d6b71af.chunk.js.LICENSE.txt",
     "static/media/zoom.jpg": "/react-flame/static/media/zoom.4bb0722e.jpg"
   },
   "entrypoints": [
-    "static/js/runtime-main.b339d816.js",
-    "static/js/2.f7a79c35.chunk.js",
+    "static/js/runtime-main.3eed7593.js",
+    "static/js/2.7d6b71af.chunk.js",
     "static/css/main.59f93dea.chunk.css",
-    "static/js/main.41adaaf9.chunk.js"
+    "static/js/main.14553500.chunk.js"
   ]
 }
