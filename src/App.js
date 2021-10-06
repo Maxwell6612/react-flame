@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import './App.css';
 import Navbar from './components/Navbar/Navbar';
 import {BrowserRouter, Route, withRouter, Switch, Redirect} from "react-router-dom";
-import UsersContainer from './components/Users/UsersContainer.jsx';
+import UsersContainer from './components/Users/UsersContainer';
 import HeaderContainer from './components/Header/HeaderContainer';
 import Login from './components/Login/Login';
 import { connect, Provider } from "react-redux";
@@ -42,7 +42,7 @@ componentWillUnmount() {
               <Route exact path='/' render={() => <Redirect to={"/profile"}/>}/>
               <Route path='/dialogs' render={withSuspense(DialogsContainer)}/>
               <Route path='/profile/:userId?' render={withSuspense(ProfileContainer)} />
-              <Route path='/users' render={() => <UsersContainer />} />
+              <Route path='/users' render={() => <UsersContainer pageTitle={"Sakura"}/>} />
               <Route path='/login' render={() => <Login />} />
               <Route path='*' render={() => <div>404 not found</div>} />
           </Switch>
