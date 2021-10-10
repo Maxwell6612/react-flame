@@ -106,6 +106,7 @@ export const toggleFollowingProgress = (isFetching: boolean, userId: number): To
     userId
 })
 
+// eslint-disable-next-line
 type GetStateType = () => AppStateType
 type DispatchType = Dispatch<ActionsType>
 type ThunkType = ThunkAction<Promise<void>, AppStateType, unknown, ActionsType> 
