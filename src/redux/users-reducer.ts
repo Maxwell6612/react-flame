@@ -1,9 +1,8 @@
 import { UserType } from './../types/types';
-import {usersAPI} from "../api/api";
+import { usersAPI } from '../api/users-api';
 import { updateObjectInArray } from "../utils/validators/object-helpers";
-import { AppStateType, InferActionsTypes } from './redux-store';
+import { AppStateType, InferActionsTypes, BaseThunkType } from './redux-store';
 import { Dispatch } from 'react';
-import { ThunkAction } from 'redux-thunk';
 
 let initialState = {
     users: [] as Array<UserType>,
@@ -73,7 +72,7 @@ export const actions = {
 // eslint-disable-next-line
 type GetStateType = () => AppStateType
 type DispatchType = Dispatch<ActionsType>
-type ThunkType = ThunkAction<Promise<void>, AppStateType, unknown, ActionsType> 
+type ThunkType = BaseThunkType<ActionsType>
 
 export const requestUsers = (page: number, pageSize: number): ThunkType => {
     return async (dispatch, getState) => {
