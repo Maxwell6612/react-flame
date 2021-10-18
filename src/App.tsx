@@ -9,14 +9,22 @@ import { connect, Provider } from "react-redux";
 import {compose} from "redux"
 import { initializeApp } from './redux/app-reducer';
 import Preloader from './components/common/Preloader/Preloader';
-import store from "./redux/redux-store";
+import store, { AppStateType } from "./redux/redux-store";
 import { withSuspense } from './hoc/withSuspense';
 
 const DialogsContainer = React.lazy(() => import('./components/Dialogs/DialogsContainer'));
 const ProfileContainer = React.lazy(() => import('./components/Profile/ProfileContainer'));
 
-class App extends Component {
-  catchAllUnhandledErrors = (reason, promise) => {
+type MapPropsType = ReturnType<typeof mapStateToProps>
+type DispatchPropsType = {
+  initializeApp: () => void
+}
+
+const SuspendedDialogs = withSuspense(DialogsContainer);
+const SuspendedProfile = withSuspense(ProfileContainer);
+
+class App extends Component<MapPropsType & DispatchPropsType> {
+  catchAllUnhandledErrors = (e: PromiseRejectionEvent) => {
     alert("Some error occurred");
     //console.error(promiseRejectionEvent);
 }
@@ -40,8 +48,8 @@ componentWillUnmount() {
           <div className='app-wrapper-content'>
           <Switch>
               <Route exact path='/' render={() => <Redirect to={"/profile"}/>}/>
-              <Route path='/dialogs' render={withSuspense(DialogsContainer)}/>
-              <Route path='/profile/:userId?' render={withSuspense(ProfileContainer)} />
+              <Route path='/dialogs' render={() => <SuspendedDialogs/>}/>
+              <Route path='/profile/:userId?' render={() => <SuspendedProfile/>} />
               <Route path='/users' render={() => <UsersContainer pageTitle={"Sakura"}/>} />
               <Route path='/login' render={() => <Login />} />
               <Route path='*' render={() => <div>404 not found</div>} />
@@ -51,15 +59,15 @@ componentWillUnmount() {
   );}
 }
 
-const mapStateToProps = (state) => ({
+const mapStateToProps = (state: AppStateType) => ({
   initialized: state.app.initialized
 }) 
 
-let AppContainer = compose(
+let AppContainer = compose<React.ComponentType>(
   withRouter,
   connect(mapStateToProps, {initializeApp}))(App);
 
-const JSApp = (props) => {
+const JSApp: React.FC = () => {
  return <BrowserRouter >
       <Provider store={store}>
           <AppContainer />
