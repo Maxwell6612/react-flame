@@ -7,7 +7,6 @@ let state = {
         {id: 3, message: 'Blank', likesCount: 11},
         {id: 4, message: 'Dada', likesCount: 11}
     ],
-    newPostText: "",
     profile: null,
     status: "",
 };

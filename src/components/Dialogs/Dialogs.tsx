@@ -1,8 +1,8 @@
 import React from "react";
 import s from "./Dialogs.module.css";
-import DialogItem from "./DialogItem/Dialogsitem.jsx";
-import Message from "./Message/Message.jsx";
-import { Redirect } from "react-router-dom";
+import DialogItem from "./DialogItem/Dialogsitem";
+import Message from "./Message/Message";
+//import { Redirect } from "react-router-dom";
 import AddMessageForm from "./AddMessageForm/AddMessageForm";
 import { InitialStateType } from "../../redux/dialogs-reducer";
 
