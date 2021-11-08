@@ -11,7 +11,7 @@ type PropsType = {
     follow: (userId: number) => void
 }
 
-let User: React.FC<PropsType> = ({user, followingInProgress, unfollow, follow}) => {
+const User: React.FC<PropsType> = ({user, followingInProgress, unfollow, follow}) => {
   return (
      <div>
               <span>

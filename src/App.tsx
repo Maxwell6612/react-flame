@@ -2,15 +2,15 @@ import React, { Component } from 'react';
 import './App.css';
 import Navbar from './components/Navbar/Navbar';
 import {BrowserRouter, Route, withRouter, Switch, Redirect} from "react-router-dom";
-import UsersContainer from './components/Users/UsersContainer';
 import HeaderContainer from './components/Header/HeaderContainer';
-import Login from './components/Login/Login';
+import {LoginPage} from './components/Login/LoginPage';
 import { connect, Provider } from "react-redux";
 import {compose} from "redux"
 import { initializeApp } from './redux/app-reducer';
 import Preloader from './components/common/Preloader/Preloader';
 import store, { AppStateType } from "./redux/redux-store";
 import { withSuspense } from './hoc/withSuspense';
+import { UsersPage } from './components/Users/UsersContainer';
 
 const DialogsContainer = React.lazy(() => import('./components/Dialogs/DialogsContainer'));
 const ProfileContainer = React.lazy(() => import('./components/Profile/ProfileContainer'));
@@ -50,8 +50,8 @@ componentWillUnmount() {
               <Route exact path='/' render={() => <Redirect to={"/profile"}/>}/>
               <Route path='/dialogs' render={() => <SuspendedDialogs/>}/>
               <Route path='/profile/:userId?' render={() => <SuspendedProfile/>} />
-              <Route path='/users' render={() => <UsersContainer pageTitle={"Sakura"}/>} />
-              <Route path='/login' render={() => <Login />} />
+              <Route path='/users' render={() => <UsersPage pageTitle={"Sakura"}/>} />
+              <Route path='/login' render={() => <LoginPage />} />
               <Route path='*' render={() => <div>404 not found</div>} />
           </Switch>
           </div>
