@@ -47,6 +47,7 @@ export const Users: FC<PropsType> = (props) => {
         }
 
         dispatch(requestUsers(actualPage, pageSize, actualFilter))
+    // eslint-disable-next-line react-hooks/exhaustive-deps
     }, [])
 
     useEffect(() => {
@@ -57,9 +58,10 @@ export const Users: FC<PropsType> = (props) => {
         if (currentPage !== 1) query.page = String(currentPage)
 
         history.push({
-            pathname: '/users',
+            pathname: '/developers',
             search: queryString.stringify(query)
         })
+    // eslint-disable-next-line react-hooks/exhaustive-deps
     }, [filter, currentPage])
 
 
